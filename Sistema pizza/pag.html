@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de Pizza</title>
+    <link rel="stylesheet" href="/pag.css">
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Sabores de Pizza</h1>
+        </div>
+        <div class="Filtros">
+        
+
+        <label for="tipo-pizza">Filtrar por tipo:</label>
+        <select id="tipo-pizza">
+            <option value="todos">Todos</option>
+            <option value="Queijo">Queijo</option>
+            <option value="Calabresa">Calabresa</option>
+            <option value="Vegetariana">Vegetariana</option>
+            <option value="Doce">Doce</option>
+            <option value="Frango">Frango</option>
+            <option value="Frutas">Frutas</option>
+            <option value="Exóticas">Exóticas</option>
+        </select>
+        <button id="botao-adicionar" onclick="adicionarNovasPizzas(document.querySelector('#tipo-pizza').value)">Filtrar Pizzas</button>
+    </div>
+    </header>
+
+    <div class="principal">
+        <ul class="listagem-pizza">
+            <li class="cartao-pizza pizza-visivel"> <!-- Adicione a classe "pizza-visivel" aqui -->
+                <img src="/img/8355992_stock-vector-pepperoni-pizza-removebg-preview.png" alt="" class="gif">
+                <span>Pizzas de Queijo</span>
+                <ul class="tipos">
+                    <li class="tipo Queijo">Queijo</li>
+                </ul>
+                <p class="descricao">Pizza de queijo mussarela</p>
+                <p class="preco">Preço: R$ 10.00</p>
+                <input type="checkbox" class="selecionar-pizza">
+            </li>
+            <!-- ... outras pizzas ... -->
+        </ul>
+    </div>
+
+    <!-- Seção de Carrinho -->
+    <div id="carrinho">
+        <h2>Sacola</h2>
+        <ul id="carrinho-lista">
+            
+        </ul>
+        <p id="total">Total: R$ 0.00</p>
+        <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar sacola</button>
+        <a href="/pagendereço.html"><button>Confirmar Compra</button></a>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
