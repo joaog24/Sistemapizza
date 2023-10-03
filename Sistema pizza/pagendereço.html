@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pagendereco.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <!-- Checkbox "Entregar Pedido" -->
+            <label for="entregarPedido">Entregar Pedido:</label>
+            <input type="checkbox" id="entregarPedido" name="entregarPedido">
+
+            <!-- Checkbox "Retirar Pedido" -->
+            <label for="retirarPedido">Retirar Pedido:</label>
+            <input type="checkbox" id="retirarPedido" name="retirarPedido">
+
+            <label for="metodoPagamento">Método de Pagamento:</label>
+            <select id="metodoPagamento" name="metodoPagamento">
+                <option value="nula"></option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <!-- Campos do cartão de crédito (inicialmente ocultos) -->
+            <div class="cartao-credito">
+                <label for="numeroCartao">Número do Cartão:</label>
+                <input type="text" id="numeroCartao" name="numeroCartao" required>
+
+                <label for="nomeTitular">Nome do Titular:</label>
+                <input type="text" id="nomeTitular" name="nomeTitular" required>
+            </div>
+
+            <!-- Campos de endereço (que serão ocultados quando "Retirar Pedido" for selecionado) -->
+            <div class="endereco">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+
+            <a href="/pedidoconfi.html"><button type="button">Confirmar</button></a>
+
+           <a href="/pag.html"><button id="cancel" type="button">Cancelar</button></a>
+        </form>
+    </div>
+
+    <script src="/pagendereco.js"></script>    
+</body>
+</html>
